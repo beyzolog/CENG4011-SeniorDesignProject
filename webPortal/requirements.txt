@@ -1,6 +1,6 @@
-streamlit
-pandas
-plotly
-stmol
-py3Dmol
-rdkit
+streamlit==1.56.0
+rdkit==2025.9.6
+pandas==2.1.4
+plotly==6.6.0
+py3Dmol==2.5.4
+stmol==0.0.9
