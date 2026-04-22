@@ -307,17 +307,11 @@ components.html(
 )
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 GENE_CONFIG = {
     "MYC (Transcription Factor)": {
-        "csv": os.path.join(
-            BASE_DIR,
-            "screening",
-            "MYC",
-            "predictions_exp_06",
-            "myc_exp06_final_1000.csv",
-        ),
+        "csv": os.path.join(BASE_DIR, "myc_exp06_final_1000.csv"),
         "pdb": "6G6K",
         "color": "#58a6ff",
         "pathway": "Transcription Factor",
@@ -329,13 +323,7 @@ GENE_CONFIG = {
         "description": "MYC oncoprotein — master regulator of cell proliferation",
     },
     "CTNNB1 (Wnt Signaling)": {
-        "csv": os.path.join(
-            BASE_DIR,
-            "screening",
-            "CTNNB1",
-            "predictions_exp_05",
-            "ctnnb1_exp05_final_1000.csv",
-        ),
+        "csv": os.path.join(BASE_DIR, "ctnnb1_exp05_final_1000.csv"),
         "pdb": "1JPW",
         "color": "#3fb950",
         "pathway": "Wnt Signaling",
@@ -802,7 +790,7 @@ with data_col:
     tbl_data = {
         "Metric":  ["Active compounds", "Inactive compounds", "Total samples",
                     "Train / Test split", "Class imbalance ratio"],
-        "Count":   [dm["active"], dm["inactive"], dm["total"],
+        "Count":   [str(dm["active"]), str(dm["inactive"]), str(dm["total"]),
                     f"{dm['train']} / {dm['test']}", f"{imbalance}x"],
         "Share":   [f"{active_pct:.1f}%", f"{inactive_pct:.1f}%", "—",
                     "75 / 25%", "balanced weights"],
@@ -1207,10 +1195,10 @@ st.plotly_chart(fig2, use_container_width=True)
 st.divider()
 st.markdown('<div class="section-header">Molecular Docking Results</div>', unsafe_allow_html=True)
 
-_BASE      = Path(__file__).parent.parent
-_DOCK_JSON = _BASE / "docking" / "exp02" / "results" / "docking_summary_exp02.json"
-_EXP02_DIR = _BASE / "docking" / "exp02" / "results"
-_PROT_DIR  = _BASE / "docking" / "proteins"
+_BASE      = Path(__file__).parent
+_DOCK_JSON = _BASE / "docking_summary_exp02.json"
+_EXP02_DIR = _BASE
+_PROT_DIR  = _BASE
 
 # exp02: her iki protein de tamamlandı
 _GENE_TO_PROT = {
