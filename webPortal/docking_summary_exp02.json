@@ -1,0 +1,632 @@
+[
+  {
+    "protein": "MYC",
+    "cid": 137355896,
+    "best_affinity": -7.955,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -7.955,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -7.945,
+        "rmsd_lb": 2.78,
+        "rmsd_ub": 4.376
+      },
+      {
+        "mode": 3,
+        "affinity": -7.937,
+        "rmsd_lb": 2.405,
+        "rmsd_ub": 3.12
+      },
+      {
+        "mode": 4,
+        "affinity": -7.862,
+        "rmsd_lb": 2.709,
+        "rmsd_ub": 3.571
+      },
+      {
+        "mode": 5,
+        "affinity": -7.801,
+        "rmsd_lb": 2.389,
+        "rmsd_ub": 3.418
+      },
+      {
+        "mode": 6,
+        "affinity": -7.781,
+        "rmsd_lb": 12.26,
+        "rmsd_ub": 14.51
+      },
+      {
+        "mode": 7,
+        "affinity": -7.738,
+        "rmsd_lb": 10.2,
+        "rmsd_ub": 13.31
+      },
+      {
+        "mode": 8,
+        "affinity": -7.616,
+        "rmsd_lb": 3.049,
+        "rmsd_ub": 4.093
+      },
+      {
+        "mode": 9,
+        "affinity": -7.613,
+        "rmsd_lb": 1.81,
+        "rmsd_ub": 2.181
+      }
+    ]
+  },
+  {
+    "protein": "MYC",
+    "cid": 124117970,
+    "best_affinity": -7.693,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -7.693,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -7.643,
+        "rmsd_lb": 2.042,
+        "rmsd_ub": 3.451
+      },
+      {
+        "mode": 3,
+        "affinity": -7.108,
+        "rmsd_lb": 2.629,
+        "rmsd_ub": 8.046
+      },
+      {
+        "mode": 4,
+        "affinity": -7.102,
+        "rmsd_lb": 2.501,
+        "rmsd_ub": 5.284
+      },
+      {
+        "mode": 5,
+        "affinity": -7.079,
+        "rmsd_lb": 2.494,
+        "rmsd_ub": 5.909
+      },
+      {
+        "mode": 6,
+        "affinity": -6.983,
+        "rmsd_lb": 13.93,
+        "rmsd_ub": 16.98
+      },
+      {
+        "mode": 7,
+        "affinity": -6.981,
+        "rmsd_lb": 2.929,
+        "rmsd_ub": 5.483
+      },
+      {
+        "mode": 8,
+        "affinity": -6.868,
+        "rmsd_lb": 2.628,
+        "rmsd_ub": 4.107
+      },
+      {
+        "mode": 9,
+        "affinity": -6.831,
+        "rmsd_lb": 3.285,
+        "rmsd_ub": 6.06
+      }
+    ]
+  },
+  {
+    "protein": "MYC",
+    "cid": 46206285,
+    "best_affinity": -7.622,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -7.622,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -7.019,
+        "rmsd_lb": 7.498,
+        "rmsd_ub": 9.411
+      },
+      {
+        "mode": 3,
+        "affinity": -6.994,
+        "rmsd_lb": 6.926,
+        "rmsd_ub": 10.32
+      },
+      {
+        "mode": 4,
+        "affinity": -6.933,
+        "rmsd_lb": 5.569,
+        "rmsd_ub": 11.13
+      },
+      {
+        "mode": 5,
+        "affinity": -6.907,
+        "rmsd_lb": 1.865,
+        "rmsd_ub": 2.197
+      },
+      {
+        "mode": 6,
+        "affinity": -6.819,
+        "rmsd_lb": 8.64,
+        "rmsd_ub": 11.29
+      },
+      {
+        "mode": 7,
+        "affinity": -6.483,
+        "rmsd_lb": 7.765,
+        "rmsd_ub": 9.773
+      },
+      {
+        "mode": 8,
+        "affinity": -6.458,
+        "rmsd_lb": 9.59,
+        "rmsd_ub": 11.66
+      },
+      {
+        "mode": 9,
+        "affinity": -6.436,
+        "rmsd_lb": 6.475,
+        "rmsd_ub": 10.54
+      }
+    ]
+  },
+  {
+    "protein": "MYC",
+    "cid": 155548927,
+    "best_affinity": -7.388,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -7.388,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -7.377,
+        "rmsd_lb": 2.542,
+        "rmsd_ub": 2.902
+      },
+      {
+        "mode": 3,
+        "affinity": -7.279,
+        "rmsd_lb": 11.07,
+        "rmsd_ub": 14.32
+      },
+      {
+        "mode": 4,
+        "affinity": -7.192,
+        "rmsd_lb": 2.15,
+        "rmsd_ub": 2.802
+      },
+      {
+        "mode": 5,
+        "affinity": -7.179,
+        "rmsd_lb": 2.529,
+        "rmsd_ub": 3.384
+      },
+      {
+        "mode": 6,
+        "affinity": -7.171,
+        "rmsd_lb": 3.071,
+        "rmsd_ub": 6.216
+      },
+      {
+        "mode": 7,
+        "affinity": -7.122,
+        "rmsd_lb": 3.737,
+        "rmsd_ub": 5.783
+      },
+      {
+        "mode": 8,
+        "affinity": -7.051,
+        "rmsd_lb": 2.488,
+        "rmsd_ub": 6.832
+      },
+      {
+        "mode": 9,
+        "affinity": -6.979,
+        "rmsd_lb": 2.787,
+        "rmsd_ub": 6.977
+      }
+    ]
+  },
+  {
+    "protein": "MYC",
+    "cid": 91515241,
+    "best_affinity": -6.307,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -6.307,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -6.143,
+        "rmsd_lb": 1.88,
+        "rmsd_ub": 2.925
+      },
+      {
+        "mode": 3,
+        "affinity": -6.102,
+        "rmsd_lb": 6.589,
+        "rmsd_ub": 13.53
+      },
+      {
+        "mode": 4,
+        "affinity": -6.086,
+        "rmsd_lb": 3.577,
+        "rmsd_ub": 6.853
+      },
+      {
+        "mode": 5,
+        "affinity": -6.084,
+        "rmsd_lb": 4.904,
+        "rmsd_ub": 8.011
+      },
+      {
+        "mode": 6,
+        "affinity": -5.929,
+        "rmsd_lb": 12.8,
+        "rmsd_ub": 15.05
+      },
+      {
+        "mode": 7,
+        "affinity": -5.865,
+        "rmsd_lb": 7.209,
+        "rmsd_ub": 14.11
+      },
+      {
+        "mode": 8,
+        "affinity": -5.843,
+        "rmsd_lb": 4.609,
+        "rmsd_ub": 7.226
+      },
+      {
+        "mode": 9,
+        "affinity": -5.361,
+        "rmsd_lb": 3.884,
+        "rmsd_ub": 6.787
+      }
+    ]
+  },
+  {
+    "protein": "CTNNB1",
+    "cid": 137355896,
+    "best_affinity": -6.362,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -6.362,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -6.184,
+        "rmsd_lb": 24.67,
+        "rmsd_ub": 26.92
+      },
+      {
+        "mode": 3,
+        "affinity": -5.963,
+        "rmsd_lb": 24.22,
+        "rmsd_ub": 25.97
+      },
+      {
+        "mode": 4,
+        "affinity": -5.927,
+        "rmsd_lb": 26.91,
+        "rmsd_ub": 28.37
+      },
+      {
+        "mode": 5,
+        "affinity": -5.92,
+        "rmsd_lb": 16.64,
+        "rmsd_ub": 19.72
+      },
+      {
+        "mode": 6,
+        "affinity": -5.887,
+        "rmsd_lb": 24.81,
+        "rmsd_ub": 26.63
+      },
+      {
+        "mode": 7,
+        "affinity": -5.822,
+        "rmsd_lb": 3.387,
+        "rmsd_ub": 8.006
+      },
+      {
+        "mode": 8,
+        "affinity": -5.776,
+        "rmsd_lb": 23.82,
+        "rmsd_ub": 26.65
+      },
+      {
+        "mode": 9,
+        "affinity": -5.736,
+        "rmsd_lb": 23.8,
+        "rmsd_ub": 26.66
+      }
+    ]
+  },
+  {
+    "protein": "CTNNB1",
+    "cid": 124117970,
+    "best_affinity": -5.946,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -5.946,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -5.906,
+        "rmsd_lb": 14.93,
+        "rmsd_ub": 19.61
+      },
+      {
+        "mode": 3,
+        "affinity": -5.896,
+        "rmsd_lb": 2.766,
+        "rmsd_ub": 8.22
+      },
+      {
+        "mode": 4,
+        "affinity": -5.832,
+        "rmsd_lb": 3.25,
+        "rmsd_ub": 7.847
+      },
+      {
+        "mode": 5,
+        "affinity": -5.832,
+        "rmsd_lb": 13.08,
+        "rmsd_ub": 16.62
+      },
+      {
+        "mode": 6,
+        "affinity": -5.814,
+        "rmsd_lb": 13.6,
+        "rmsd_ub": 18.91
+      },
+      {
+        "mode": 7,
+        "affinity": -5.664,
+        "rmsd_lb": 1.74,
+        "rmsd_ub": 2.006
+      },
+      {
+        "mode": 8,
+        "affinity": -5.658,
+        "rmsd_lb": 4.206,
+        "rmsd_ub": 10.3
+      },
+      {
+        "mode": 9,
+        "affinity": -5.587,
+        "rmsd_lb": 2.439,
+        "rmsd_ub": 3.369
+      }
+    ]
+  },
+  {
+    "protein": "CTNNB1",
+    "cid": 155548927,
+    "best_affinity": -5.692,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -5.692,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -5.667,
+        "rmsd_lb": 26.66,
+        "rmsd_ub": 27.68
+      },
+      {
+        "mode": 3,
+        "affinity": -5.559,
+        "rmsd_lb": 14.41,
+        "rmsd_ub": 17.16
+      },
+      {
+        "mode": 4,
+        "affinity": -5.532,
+        "rmsd_lb": 2.818,
+        "rmsd_ub": 6.355
+      },
+      {
+        "mode": 5,
+        "affinity": -5.484,
+        "rmsd_lb": 13.6,
+        "rmsd_ub": 16.47
+      },
+      {
+        "mode": 6,
+        "affinity": -5.464,
+        "rmsd_lb": 26.32,
+        "rmsd_ub": 28.16
+      },
+      {
+        "mode": 7,
+        "affinity": -5.422,
+        "rmsd_lb": 3.261,
+        "rmsd_ub": 6.314
+      },
+      {
+        "mode": 8,
+        "affinity": -5.415,
+        "rmsd_lb": 17.6,
+        "rmsd_ub": 20.8
+      },
+      {
+        "mode": 9,
+        "affinity": -5.311,
+        "rmsd_lb": 26.24,
+        "rmsd_ub": 27.55
+      }
+    ]
+  },
+  {
+    "protein": "CTNNB1",
+    "cid": 46206285,
+    "best_affinity": -5.559,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -5.559,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -5.522,
+        "rmsd_lb": 3.013,
+        "rmsd_ub": 4.718
+      },
+      {
+        "mode": 3,
+        "affinity": -5.384,
+        "rmsd_lb": 16.06,
+        "rmsd_ub": 19.19
+      },
+      {
+        "mode": 4,
+        "affinity": -5.3,
+        "rmsd_lb": 2.175,
+        "rmsd_ub": 2.641
+      },
+      {
+        "mode": 5,
+        "affinity": -5.243,
+        "rmsd_lb": 2.61,
+        "rmsd_ub": 4.117
+      },
+      {
+        "mode": 6,
+        "affinity": -5.224,
+        "rmsd_lb": 5.816,
+        "rmsd_ub": 8.627
+      },
+      {
+        "mode": 7,
+        "affinity": -5.212,
+        "rmsd_lb": 5.396,
+        "rmsd_ub": 11.03
+      },
+      {
+        "mode": 8,
+        "affinity": -5.211,
+        "rmsd_lb": 5.601,
+        "rmsd_ub": 7.485
+      },
+      {
+        "mode": 9,
+        "affinity": -5.129,
+        "rmsd_lb": 7.818,
+        "rmsd_ub": 11.58
+      }
+    ]
+  },
+  {
+    "protein": "CTNNB1",
+    "cid": 91515241,
+    "best_affinity": -4.423,
+    "best_mode_rmsd": 0.0,
+    "num_poses": 9,
+    "all_poses": [
+      {
+        "mode": 1,
+        "affinity": -4.423,
+        "rmsd_lb": 0.0,
+        "rmsd_ub": 0.0
+      },
+      {
+        "mode": 2,
+        "affinity": -4.297,
+        "rmsd_lb": 13.73,
+        "rmsd_ub": 17.05
+      },
+      {
+        "mode": 3,
+        "affinity": -4.117,
+        "rmsd_lb": 15.05,
+        "rmsd_ub": 17.58
+      },
+      {
+        "mode": 4,
+        "affinity": -3.959,
+        "rmsd_lb": 14.99,
+        "rmsd_ub": 17.94
+      },
+      {
+        "mode": 5,
+        "affinity": -3.947,
+        "rmsd_lb": 14.29,
+        "rmsd_ub": 17.23
+      },
+      {
+        "mode": 6,
+        "affinity": -3.932,
+        "rmsd_lb": 13.7,
+        "rmsd_ub": 16.5
+      },
+      {
+        "mode": 7,
+        "affinity": -3.803,
+        "rmsd_lb": 15.34,
+        "rmsd_ub": 19.21
+      },
+      {
+        "mode": 8,
+        "affinity": -3.536,
+        "rmsd_lb": 2.945,
+        "rmsd_ub": 4.652
+      },
+      {
+        "mode": 9,
+        "affinity": -3.421,
+        "rmsd_lb": 16.22,
+        "rmsd_ub": 20.29
+      }
+    ]
+  }
+]
