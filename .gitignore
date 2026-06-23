@@ -1,0 +1,22 @@
+# Windows sistem dosyaları
+Thumbs.db
+desktop.ini
+
+# Python cache dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Sanal ortamlar ve loglar
+.venv/
+venv/
+*.log
+
+# Web portalı lokal konfigürasyonları
+webPortal/.env
+webPortal/instance/
+
+# Docking simülasyon klasörünü tamamen muaf tut
+docking/
