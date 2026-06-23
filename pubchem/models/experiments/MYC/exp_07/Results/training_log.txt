@@ -1,0 +1,192 @@
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO]   MYC FINAL MODEL TRAINING - PRODUCTION PIPELINE
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO] Experiment: exp_07
+[2026-06-22 14:17:48] [INFO] Output directory: ../models/experiments/MYC/exp_07/Results
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO]   STEP 1: DATA LOADING
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO] Data loaded: 660 samples, 126 features
+[2026-06-22 14:17:48] [INFO] Feature columns locked: 126 features
+[2026-06-22 14:17:48] [INFO] First 10 features: ['885', '14', '1738', '42', '1919', '1622', '1097', '1138', '305', '378']
+[2026-06-22 14:17:48] [INFO] ✅ Feature order saved: ../models/experiments/MYC/exp_07/Results/feature_order.json
+[2026-06-22 14:17:48] [INFO] Class distribution:
+[2026-06-22 14:17:48] [INFO]   Inactive (0): 177 (26.8%)
+[2026-06-22 14:17:48] [INFO]   Active (1): 483 (73.2%)
+[2026-06-22 14:17:48] [INFO]   Imbalance ratio: 2.73
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO]   STEP 2: TRAIN-TEST SPLIT (Stratified)
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO] Train set: 495 samples
+[2026-06-22 14:17:48] [INFO] Test set: 165 samples
+[2026-06-22 14:17:48] [INFO] Train active: 362 (73.1%)
+[2026-06-22 14:17:48] [INFO] Test active: 121 (73.3%)
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO]   STEP 3: MODEL TRAINING & VALIDATION
+[2026-06-22 14:17:48] [INFO] ================================================================================
+[2026-06-22 14:17:48] [INFO] XGBoost scale_pos_weight: 0.37
+[2026-06-22 14:17:48] [INFO] 
+============================================================
+[2026-06-22 14:17:48] [INFO] Training: EXTRA_TREES
+[2026-06-22 14:17:48] [INFO] ============================================================
+[2026-06-22 14:17:48] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:17:49] [INFO]   Fold 1: AUC=0.9431, Acc=0.8081, Prec=0.9655
+[2026-06-22 14:17:50] [INFO]   Fold 2: AUC=0.9168, Acc=0.7475, Prec=1.0000
+[2026-06-22 14:17:51] [INFO]   Fold 3: AUC=0.9275, Acc=0.7980, Prec=0.9815
+[2026-06-22 14:17:52] [INFO]   Fold 4: AUC=0.9527, Acc=0.7475, Prec=1.0000
+[2026-06-22 14:17:53] [INFO]   Fold 5: AUC=0.9113, Acc=0.6970, Prec=0.9375
+[2026-06-22 14:17:53] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:17:53] [INFO]   Mean AUC: 0.9303 ± 0.0156
+[2026-06-22 14:17:53] [INFO]   Mean Accuracy: 0.7596 ± 0.0401
+[2026-06-22 14:17:53] [INFO]   Mean Precision: 0.9769
+[2026-06-22 14:17:53] [INFO]   Mean Recall: 0.6877
+[2026-06-22 14:17:53] [INFO]   Mean F1: 0.8059
+[2026-06-22 14:17:53] [INFO] 
+Training on full training set...
+[2026-06-22 14:17:54] [INFO] 
+Train Metrics:
+[2026-06-22 14:17:54] [INFO]   Accuracy: 0.8364
+[2026-06-22 14:17:54] [INFO]   AUC: 0.9503
+[2026-06-22 14:17:54] [INFO]   Precision: 0.9795
+[2026-06-22 14:17:54] [INFO]   Recall: 0.7928
+[2026-06-22 14:17:54] [INFO] 
+Test Metrics:
+[2026-06-22 14:17:54] [INFO]   Accuracy: 0.7455
+[2026-06-22 14:17:54] [INFO]   AUC: 0.9144
+[2026-06-22 14:17:54] [INFO]   Precision: 0.9877
+[2026-06-22 14:17:54] [INFO]   Recall: 0.6612
+[2026-06-22 14:17:54] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:17:54] [INFO]   Accuracy Gap: 0.0909 (9.09%)
+[2026-06-22 14:17:54] [INFO]   AUC Gap: 0.0359 (3.59%)
+[2026-06-22 14:17:54] [INFO] 
+Validation Checks:
+[2026-06-22 14:17:54] [INFO]   Overfitting gap <= 0.08: ❌ FAIL
+[2026-06-22 14:17:54] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:17:54] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:17:54] [INFO]   TN: 43, FP: 1
+[2026-06-22 14:17:54] [INFO]   FN: 41, TP: 80
+[2026-06-22 14:17:54] [INFO] 
+============================================================
+[2026-06-22 14:17:54] [INFO] Training: RANDOM_FOREST
+[2026-06-22 14:17:54] [INFO] ============================================================
+[2026-06-22 14:17:54] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:17:55] [INFO]   Fold 1: AUC=0.9484, Acc=0.8182, Prec=0.9661
+[2026-06-22 14:17:56] [INFO]   Fold 2: AUC=0.9157, Acc=0.7475, Prec=1.0000
+[2026-06-22 14:17:57] [INFO]   Fold 3: AUC=0.9249, Acc=0.7980, Prec=0.9815
+[2026-06-22 14:17:58] [INFO]   Fold 4: AUC=0.9568, Acc=0.7475, Prec=1.0000
+[2026-06-22 14:17:59] [INFO]   Fold 5: AUC=0.9138, Acc=0.6970, Prec=0.9375
+[2026-06-22 14:17:59] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:17:59] [INFO]   Mean AUC: 0.9319 ± 0.0175
+[2026-06-22 14:17:59] [INFO]   Mean Accuracy: 0.7616 ± 0.0427
+[2026-06-22 14:17:59] [INFO]   Mean Precision: 0.9770
+[2026-06-22 14:17:59] [INFO]   Mean Recall: 0.6904
+[2026-06-22 14:17:59] [INFO]   Mean F1: 0.8076
+[2026-06-22 14:17:59] [INFO] 
+Training on full training set...
+[2026-06-22 14:18:01] [INFO] 
+Train Metrics:
+[2026-06-22 14:18:01] [INFO]   Accuracy: 0.8404
+[2026-06-22 14:18:01] [INFO]   AUC: 0.9505
+[2026-06-22 14:18:01] [INFO]   Precision: 0.9829
+[2026-06-22 14:18:01] [INFO]   Recall: 0.7956
+[2026-06-22 14:18:01] [INFO] 
+Test Metrics:
+[2026-06-22 14:18:01] [INFO]   Accuracy: 0.7455
+[2026-06-22 14:18:01] [INFO]   AUC: 0.9129
+[2026-06-22 14:18:01] [INFO]   Precision: 0.9877
+[2026-06-22 14:18:01] [INFO]   Recall: 0.6612
+[2026-06-22 14:18:01] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:18:01] [INFO]   Accuracy Gap: 0.0949 (9.49%)
+[2026-06-22 14:18:01] [INFO]   AUC Gap: 0.0376 (3.76%)
+[2026-06-22 14:18:01] [INFO] 
+Validation Checks:
+[2026-06-22 14:18:01] [INFO]   Overfitting gap <= 0.08: ❌ FAIL
+[2026-06-22 14:18:01] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:18:01] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:18:01] [INFO]   TN: 43, FP: 1
+[2026-06-22 14:18:01] [INFO]   FN: 41, TP: 80
+[2026-06-22 14:18:01] [INFO] 
+============================================================
+[2026-06-22 14:18:01] [INFO] Training: XGBOOST
+[2026-06-22 14:18:01] [INFO] ============================================================
+[2026-06-22 14:18:01] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:18:01] [INFO]   Fold 1: AUC=0.9320, Acc=0.7879, Prec=0.9333
+[2026-06-22 14:18:01] [INFO]   Fold 2: AUC=0.8414, Acc=0.7273, Prec=0.9259
+[2026-06-22 14:18:01] [INFO]   Fold 3: AUC=0.8819, Acc=0.7980, Prec=0.9815
+[2026-06-22 14:18:01] [INFO]   Fold 4: AUC=0.9259, Acc=0.7778, Prec=1.0000
+[2026-06-22 14:18:02] [INFO]   Fold 5: AUC=0.9084, Acc=0.7778, Prec=0.9808
+[2026-06-22 14:18:02] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:18:02] [INFO]   Mean AUC: 0.8980 ± 0.0332
+[2026-06-22 14:18:02] [INFO]   Mean Accuracy: 0.7737 ± 0.0244
+[2026-06-22 14:18:02] [INFO]   Mean Precision: 0.9643
+[2026-06-22 14:18:02] [INFO]   Mean Recall: 0.7182
+[2026-06-22 14:18:02] [INFO]   Mean F1: 0.8226
+[2026-06-22 14:18:02] [INFO] 
+Training on full training set...
+[2026-06-22 14:18:02] [INFO] 
+Train Metrics:
+[2026-06-22 14:18:02] [INFO]   Accuracy: 0.7899
+[2026-06-22 14:18:02] [INFO]   AUC: 0.9298
+[2026-06-22 14:18:02] [INFO]   Precision: 0.9708
+[2026-06-22 14:18:02] [INFO]   Recall: 0.7348
+[2026-06-22 14:18:02] [INFO] 
+Test Metrics:
+[2026-06-22 14:18:02] [INFO]   Accuracy: 0.7273
+[2026-06-22 14:18:02] [INFO]   AUC: 0.9209
+[2026-06-22 14:18:02] [INFO]   Precision: 0.9872
+[2026-06-22 14:18:02] [INFO]   Recall: 0.6364
+[2026-06-22 14:18:02] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:18:02] [INFO]   Accuracy Gap: 0.0626 (6.26%)
+[2026-06-22 14:18:02] [INFO]   AUC Gap: 0.0089 (0.89%)
+[2026-06-22 14:18:02] [INFO] 
+Validation Checks:
+[2026-06-22 14:18:02] [INFO]   Overfitting gap <= 0.08: ✅ PASS
+[2026-06-22 14:18:02] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:18:02] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:18:02] [INFO]   TN: 43, FP: 1
+[2026-06-22 14:18:02] [INFO]   FN: 44, TP: 77
+[2026-06-22 14:18:02] [INFO] 
+🏆 New best model: xgboost (Test AUC: 0.9209)
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO]   STEP 4: BEST MODEL SELECTION
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO] ✅ Best model selected: xgboost
+[2026-06-22 14:18:02] [INFO] Test AUC: 0.9209
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO]   PRE-SCREENING TEST: Random Passive Molecules
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO] Generating 1000 random passive molecule fingerprints...
+[2026-06-22 14:18:02] [INFO] Features: 126
+[2026-06-22 14:18:02] [INFO] Results on 1000 passive molecules:
+[2026-06-22 14:18:02] [INFO]   Hits at threshold 0.50: 6 (0.60%)
+[2026-06-22 14:18:02] [INFO]   Hits at threshold 0.70: 0 (0.00%)
+[2026-06-22 14:18:02] [INFO]   Hits at threshold 0.80: 0 (0.00%)
+[2026-06-22 14:18:02] [SUCCESS] ✅ PASSED: Hit rate 0.00% <= 1.0%
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO]   STEP 6: SAVING MODEL AND METADATA
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO] ✅ Model saved: ../models/experiments/MYC/exp_07/Results/xgboost_final_model.pkl
+[2026-06-22 14:18:02] [INFO] ✅ Metadata saved: ../models/experiments/MYC/exp_07/Results/model_metadata.json
+[2026-06-22 14:18:02] [INFO] ✅ All results saved: ../models/experiments/MYC/exp_07/Results/all_models_results.json
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO]   TRAINING COMPLETED SUCCESSFULLY
+[2026-06-22 14:18:02] [INFO] ================================================================================
+[2026-06-22 14:18:02] [INFO] Total time: 0:00:13.831941
+[2026-06-22 14:18:02] [INFO] Best model: xgboost
+[2026-06-22 14:18:02] [INFO] Test AUC: 0.9209
+[2026-06-22 14:18:02] [INFO] Overfitting gap: 6.26%
+[2026-06-22 14:18:02] [INFO] Pre-screening hit rate: 0.00%
+[2026-06-22 14:18:02] [INFO] 
+✅ Model is ready for 110M screening!
+[2026-06-22 14:18:02] [INFO] Feature order: ../models/experiments/MYC/exp_07/Results/feature_order.json
+[2026-06-22 14:18:02] [INFO] Model file: ../models/experiments/MYC/exp_07/Results/xgboost_final_model.pkl
+[2026-06-22 14:18:02] [INFO] Metadata: ../models/experiments/MYC/exp_07/Results/model_metadata.json

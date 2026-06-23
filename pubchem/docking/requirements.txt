@@ -1,0 +1,6 @@
+biopython
+rdkit
+meeko
+requests
+pyyaml
+pandas

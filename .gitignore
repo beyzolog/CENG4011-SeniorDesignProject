@@ -1,0 +1,137 @@
+# =============================================================================
+# CTNNB1 / MYC — PubChem ML + Docking Pipeline
+# GitHub'a yalnızca kod, notebook, model metadata ve küçük özet dosyaları gider.
+# Ham veri ve tarama çıktıları yerel kalır; script'lerle yeniden üretilebilir.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# IDE / editör / OS
+# -----------------------------------------------------------------------------
+.cursor/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+.env.*
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test / lint cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ChEMBL ham indirmeleri (notebook ile yeniden çekilebilir)
+chembl/data/
+
+# -----------------------------------------------------------------------------
+# Büyük ham veri (pubchem/data ~61 MB)
+# PubChem AID indirmeleri, fingerprint matrisleri, RFECV arşivi
+# Yeniden üretim: scripts/01–03
+# -----------------------------------------------------------------------------
+# Büyük ham veri — 05 hariç
+pubchem/data/*
+!pubchem/data/05_updated_selected_features/
+!pubchem/data/05_updated_selected_features/**
+
+
+
+# -----------------------------------------------------------------------------
+# Virtual screening çıktıları (pubchem/screening ~86 MB)
+# Büyük tahmin CSV'leri; özet dosyalar istenirse aşağıdaki istisnaları açın
+# Yeniden üretim: scripts/05–07
+# -----------------------------------------------------------------------------
+# pubchem/screening/
+
+# İsteğe bağlı: yalnızca küçük özet dosyaları repoda tutmak için yukarıdaki
+# satırı yorumlayıp şunları kullanın:
+pubchem/screening/**/*
+# !pubchem/screening/**/step*.py
+!pubchem/screening/**/*_final_1000.csv
+!pubchem/screening/**/*_clusters.csv
+!pubchem/screening/**/*_filtering_report.txt
+
+# Ek güvenlik: klasör dışına taşınmış büyük CSV kalıpları
+**/*_prefiltered.csv
+**/*_all_hits.csv
+**/*_ecfp4_2048_*.csv
+**/01_raw/**/*.csv
+
+# -----------------------------------------------------------------------------
+# Molecular docking — ağır / yeniden üretilebilir çıktılar (~14 MB)
+# Kod (core/, config/, reports/) repoda kalır
+# Yeniden üretim: scripts/08–09, docking/README.md
+# -----------------------------------------------------------------------------
+pubchem/docking/runs/
+pubchem/docking/bin/vina
+pubchem/docking/shared/ligands/*.pdbqt
+pubchem/docking/shared/ligands/*.sdf
+pubchem/docking/shared/ligands/*_2d.sdf
+pubchem/docking/shared/proteins/*_raw.pdb
+pubchem/docking/shared/proteins/*_clean.pdb
+pubchem/docking/*.log
+
+# Docking yapısal dosyaları (boş klasörler repoda görünsün diye)
+!pubchem/docking/shared/ligands/.gitkeep
+!pubchem/docking/shared/proteins/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Eğitim / script arşivi — eski denemeler, büyük .out dosyaları
+# -----------------------------------------------------------------------------
+pubchem/scripts/archive/*.out
+pubchem/notebooks/archive/
+
+# -----------------------------------------------------------------------------
+# Model dosyaları (~1.5 MB) — REPOYA DAHİL
+# Aşağıdaki satırları yorumda bıraktık; .pkl dosyaları commit edilir.
+# Modelleri repodan çıkarmak isterseniz şu satırın yorumunu kaldırın:
+# pubchem/models/**/*.pkl
+
+# -----------------------------------------------------------------------------
+# Genel büyük / ikili dosya güvenlik ağı (100 MB GitHub sınırı)
+# -----------------------------------------------------------------------------
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.npz
+*.npy
+*.mat
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.bz2
+*.xz
+*.pdbqt
+!pubchem/docking/shared/proteins/*_receptor.pdbqt
+*.mol2
+*.mae
+
+# CSV istisnası: küçük metadata/rapor CSV'leri (models, docking/reports, chembl hariç)
+# Büyük CSV'ler yukarıdaki kalıplarla zaten engellenir

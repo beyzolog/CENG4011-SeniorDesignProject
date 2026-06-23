@@ -1,0 +1,78 @@
+{
+  "gene": "CTNNB1",
+  "experiment": "exp_06",
+  "model_type": "random_forest",
+  "training_date": "2026-06-22T14:10:48.555919",
+  "data": {
+    "total_samples": 715,
+    "train_samples": 536,
+    "test_samples": 179,
+    "n_features": 133,
+    "imbalance_ratio": 2.592964824120603
+  },
+  "performance": {
+    "cv_metrics": {
+      "mean_accuracy": 0.837625475943233,
+      "mean_auc": 0.8858065306341167,
+      "mean_precision": 0.9520154902536472,
+      "mean_recall": 0.8163836163836165,
+      "mean_f1": 0.8773549169727973,
+      "std_auc": 0.03593990765429792,
+      "std_accuracy": 0.04730392541869212
+    },
+    "train_metrics": {
+      "accuracy": 0.8488805970149254,
+      "auc": 0.9155350918266479,
+      "precision": 0.9580838323353293,
+      "recall": 0.8268733850129198,
+      "f1": 0.8876560332871013
+    },
+    "test_metrics": {
+      "accuracy": 0.8212290502793296,
+      "auc": 0.9127131782945737,
+      "precision": 0.98989898989899,
+      "recall": 0.7596899224806202,
+      "f1": 0.8596491228070176
+    },
+    "acc_gap": 0.027651546735595778,
+    "auc_gap": 0.0028219135320742827,
+    "passed_overfitting": true,
+    "passed_min_auc": true,
+    "confusion_matrix": [
+      [
+        49,
+        1
+      ],
+      [
+        31,
+        98
+      ]
+    ]
+  },
+  "prescreening": {
+    "hits_50": 709,
+    "hits_70": 0,
+    "hits_80": 0,
+    "rate_50": 0.709,
+    "rate_70": 0.0,
+    "rate_80": 0.0
+  },
+  "hyperparameters": {
+    "n_estimators": 200,
+    "max_depth": 10,
+    "min_samples_split": 25,
+    "min_samples_leaf": 15,
+    "max_features": "sqrt",
+    "max_samples": 0.8,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "validation_thresholds": {
+    "max_overfitting_gap": 0.08,
+    "min_test_auc": 0.85,
+    "max_false_positive_rate": 0.01
+  },
+  "feature_order_file": "feature_order.json",
+  "screening_threshold": 0.8
+}

@@ -1,0 +1,194 @@
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO]   CTNNB1 FINAL MODEL TRAINING - PRODUCTION PIPELINE
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO] Experiment: exp_06
+[2026-06-22 14:10:34] [INFO] Output directory: ../models/experiments/CTNNB1/exp_06/Results
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO]   STEP 1: DATA LOADING
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO] Data loaded: 715 samples, 133 features
+[2026-06-22 14:10:34] [INFO] Feature columns locked: 133 features
+[2026-06-22 14:10:34] [INFO] First 10 features: ['933', '1097', '1722', '1504', '1855', '695', '322', '119', '407', '378']
+[2026-06-22 14:10:34] [INFO] ✅ Feature order saved: ../models/experiments/CTNNB1/exp_06/Results/feature_order.json
+[2026-06-22 14:10:34] [INFO] Class distribution:
+[2026-06-22 14:10:34] [INFO]   Inactive (0): 199 (27.8%)
+[2026-06-22 14:10:34] [INFO]   Active (1): 516 (72.2%)
+[2026-06-22 14:10:34] [INFO]   Imbalance ratio: 2.59
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO]   STEP 2: TRAIN-TEST SPLIT (Stratified)
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO] Train set: 536 samples
+[2026-06-22 14:10:34] [INFO] Test set: 179 samples
+[2026-06-22 14:10:34] [INFO] Train active: 387 (72.2%)
+[2026-06-22 14:10:34] [INFO] Test active: 129 (72.1%)
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO]   STEP 3: MODEL TRAINING & VALIDATION
+[2026-06-22 14:10:34] [INFO] ================================================================================
+[2026-06-22 14:10:34] [INFO] XGBoost scale_pos_weight: 0.39
+[2026-06-22 14:10:34] [INFO] 
+============================================================
+[2026-06-22 14:10:34] [INFO] Training: EXTRA_TREES
+[2026-06-22 14:10:34] [INFO] ============================================================
+[2026-06-22 14:10:34] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:10:35] [INFO]   Fold 1: AUC=0.8902, Acc=0.8611, Prec=0.9315
+[2026-06-22 14:10:36] [INFO]   Fold 2: AUC=0.9277, Acc=0.8598, Prec=0.9559
+[2026-06-22 14:10:37] [INFO]   Fold 3: AUC=0.8169, Acc=0.7477, Prec=0.9464
+[2026-06-22 14:10:38] [INFO]   Fold 4: AUC=0.9110, Acc=0.8692, Prec=0.9565
+[2026-06-22 14:10:39] [INFO]   Fold 5: AUC=0.8868, Acc=0.8224, Prec=0.9403
+[2026-06-22 14:10:39] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:10:39] [INFO]   Mean AUC: 0.8865 ± 0.0378
+[2026-06-22 14:10:39] [INFO]   Mean Accuracy: 0.8320 ± 0.0452
+[2026-06-22 14:10:39] [INFO]   Mean Precision: 0.9461
+[2026-06-22 14:10:39] [INFO]   Mean Recall: 0.8138
+[2026-06-22 14:10:39] [INFO]   Mean F1: 0.8735
+[2026-06-22 14:10:39] [INFO] 
+Training on full training set...
+[2026-06-22 14:10:40] [INFO] 
+Train Metrics:
+[2026-06-22 14:10:40] [INFO]   Accuracy: 0.8489
+[2026-06-22 14:10:40] [INFO]   AUC: 0.9143
+[2026-06-22 14:10:40] [INFO]   Precision: 0.9581
+[2026-06-22 14:10:40] [INFO]   Recall: 0.8269
+[2026-06-22 14:10:40] [INFO] 
+Test Metrics:
+[2026-06-22 14:10:40] [INFO]   Accuracy: 0.8212
+[2026-06-22 14:10:40] [INFO]   AUC: 0.9081
+[2026-06-22 14:10:40] [INFO]   Precision: 0.9802
+[2026-06-22 14:10:40] [INFO]   Recall: 0.7674
+[2026-06-22 14:10:40] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:10:40] [INFO]   Accuracy Gap: 0.0277 (2.77%)
+[2026-06-22 14:10:40] [INFO]   AUC Gap: 0.0062 (0.62%)
+[2026-06-22 14:10:40] [INFO] 
+Validation Checks:
+[2026-06-22 14:10:40] [INFO]   Overfitting gap <= 0.08: ✅ PASS
+[2026-06-22 14:10:40] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:10:40] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:10:40] [INFO]   TN: 48, FP: 2
+[2026-06-22 14:10:40] [INFO]   FN: 30, TP: 99
+[2026-06-22 14:10:40] [INFO] 
+🏆 New best model: extra_trees (Test AUC: 0.9081)
+[2026-06-22 14:10:40] [INFO] 
+============================================================
+[2026-06-22 14:10:40] [INFO] Training: RANDOM_FOREST
+[2026-06-22 14:10:40] [INFO] ============================================================
+[2026-06-22 14:10:40] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:10:41] [INFO]   Fold 1: AUC=0.8902, Acc=0.8704, Prec=0.9324
+[2026-06-22 14:10:42] [INFO]   Fold 2: AUC=0.9216, Acc=0.8692, Prec=0.9701
+[2026-06-22 14:10:43] [INFO]   Fold 3: AUC=0.8208, Acc=0.7477, Prec=0.9464
+[2026-06-22 14:10:44] [INFO]   Fold 4: AUC=0.9158, Acc=0.8692, Prec=0.9565
+[2026-06-22 14:10:45] [INFO]   Fold 5: AUC=0.8806, Acc=0.8318, Prec=0.9545
+[2026-06-22 14:10:45] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:10:45] [INFO]   Mean AUC: 0.8858 ± 0.0359
+[2026-06-22 14:10:45] [INFO]   Mean Accuracy: 0.8376 ± 0.0473
+[2026-06-22 14:10:45] [INFO]   Mean Precision: 0.9520
+[2026-06-22 14:10:45] [INFO]   Mean Recall: 0.8164
+[2026-06-22 14:10:45] [INFO]   Mean F1: 0.8774
+[2026-06-22 14:10:45] [INFO] 
+Training on full training set...
+[2026-06-22 14:10:46] [INFO] 
+Train Metrics:
+[2026-06-22 14:10:46] [INFO]   Accuracy: 0.8489
+[2026-06-22 14:10:46] [INFO]   AUC: 0.9155
+[2026-06-22 14:10:46] [INFO]   Precision: 0.9581
+[2026-06-22 14:10:46] [INFO]   Recall: 0.8269
+[2026-06-22 14:10:46] [INFO] 
+Test Metrics:
+[2026-06-22 14:10:46] [INFO]   Accuracy: 0.8212
+[2026-06-22 14:10:46] [INFO]   AUC: 0.9127
+[2026-06-22 14:10:46] [INFO]   Precision: 0.9899
+[2026-06-22 14:10:46] [INFO]   Recall: 0.7597
+[2026-06-22 14:10:46] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:10:46] [INFO]   Accuracy Gap: 0.0277 (2.77%)
+[2026-06-22 14:10:46] [INFO]   AUC Gap: 0.0028 (0.28%)
+[2026-06-22 14:10:46] [INFO] 
+Validation Checks:
+[2026-06-22 14:10:46] [INFO]   Overfitting gap <= 0.08: ✅ PASS
+[2026-06-22 14:10:46] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:10:46] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:10:46] [INFO]   TN: 49, FP: 1
+[2026-06-22 14:10:46] [INFO]   FN: 31, TP: 98
+[2026-06-22 14:10:46] [INFO] 
+🏆 New best model: random_forest (Test AUC: 0.9127)
+[2026-06-22 14:10:46] [INFO] 
+============================================================
+[2026-06-22 14:10:46] [INFO] Training: XGBOOST
+[2026-06-22 14:10:46] [INFO] ============================================================
+[2026-06-22 14:10:46] [INFO] Performing 5-fold stratified cross-validation...
+[2026-06-22 14:10:47] [INFO]   Fold 1: AUC=0.8605, Acc=0.7963, Prec=0.9118
+[2026-06-22 14:10:47] [INFO]   Fold 2: AUC=0.8948, Acc=0.8131, Prec=0.9254
+[2026-06-22 14:10:47] [INFO]   Fold 3: AUC=0.8225, Acc=0.7196, Prec=0.9273
+[2026-06-22 14:10:47] [INFO]   Fold 4: AUC=0.9063, Acc=0.8692, Prec=0.9565
+[2026-06-22 14:10:47] [INFO]   Fold 5: AUC=0.8725, Acc=0.7757, Prec=0.9655
+[2026-06-22 14:10:47] [INFO] 
+Cross-Validation Results:
+[2026-06-22 14:10:47] [INFO]   Mean AUC: 0.8713 ± 0.0292
+[2026-06-22 14:10:47] [INFO]   Mean Accuracy: 0.7948 ± 0.0487
+[2026-06-22 14:10:47] [INFO]   Mean Precision: 0.9373
+[2026-06-22 14:10:47] [INFO]   Mean Recall: 0.7675
+[2026-06-22 14:10:47] [INFO]   Mean F1: 0.8422
+[2026-06-22 14:10:47] [INFO] 
+Training on full training set...
+[2026-06-22 14:10:48] [INFO] 
+Train Metrics:
+[2026-06-22 14:10:48] [INFO]   Accuracy: 0.8340
+[2026-06-22 14:10:48] [INFO]   AUC: 0.8997
+[2026-06-22 14:10:48] [INFO]   Precision: 0.9515
+[2026-06-22 14:10:48] [INFO]   Recall: 0.8114
+[2026-06-22 14:10:48] [INFO] 
+Test Metrics:
+[2026-06-22 14:10:48] [INFO]   Accuracy: 0.8101
+[2026-06-22 14:10:48] [INFO]   AUC: 0.8917
+[2026-06-22 14:10:48] [INFO]   Precision: 0.9798
+[2026-06-22 14:10:48] [INFO]   Recall: 0.7519
+[2026-06-22 14:10:48] [INFO] 
+Overfitting Analysis:
+[2026-06-22 14:10:48] [INFO]   Accuracy Gap: 0.0239 (2.39%)
+[2026-06-22 14:10:48] [INFO]   AUC Gap: 0.0080 (0.80%)
+[2026-06-22 14:10:48] [INFO] 
+Validation Checks:
+[2026-06-22 14:10:48] [INFO]   Overfitting gap <= 0.08: ✅ PASS
+[2026-06-22 14:10:48] [INFO]   Test AUC >= 0.85: ✅ PASS
+[2026-06-22 14:10:48] [INFO] 
+Confusion Matrix:
+[2026-06-22 14:10:48] [INFO]   TN: 48, FP: 2
+[2026-06-22 14:10:48] [INFO]   FN: 32, TP: 97
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO]   STEP 4: BEST MODEL SELECTION
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO] ✅ Best model selected: random_forest
+[2026-06-22 14:10:48] [INFO] Test AUC: 0.9127
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO]   PRE-SCREENING TEST: Random Passive Molecules
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO] Generating 1000 random passive molecule fingerprints...
+[2026-06-22 14:10:48] [INFO] Features: 133
+[2026-06-22 14:10:48] [INFO] Results on 1000 passive molecules:
+[2026-06-22 14:10:48] [INFO]   Hits at threshold 0.50: 709 (70.90%)
+[2026-06-22 14:10:48] [INFO]   Hits at threshold 0.70: 0 (0.00%)
+[2026-06-22 14:10:48] [INFO]   Hits at threshold 0.80: 0 (0.00%)
+[2026-06-22 14:10:48] [SUCCESS] ✅ PASSED: Hit rate 0.00% <= 1.0%
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO]   STEP 6: SAVING MODEL AND METADATA
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO] ✅ Model saved: ../models/experiments/CTNNB1/exp_06/Results/random_forest_final_model.pkl
+[2026-06-22 14:10:48] [INFO] ✅ Metadata saved: ../models/experiments/CTNNB1/exp_06/Results/model_metadata.json
+[2026-06-22 14:10:48] [INFO] ✅ All results saved: ../models/experiments/CTNNB1/exp_06/Results/all_models_results.json
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO]   TRAINING COMPLETED SUCCESSFULLY
+[2026-06-22 14:10:48] [INFO] ================================================================================
+[2026-06-22 14:10:48] [INFO] Total time: 0:00:14.477968
+[2026-06-22 14:10:48] [INFO] Best model: random_forest
+[2026-06-22 14:10:48] [INFO] Test AUC: 0.9127
+[2026-06-22 14:10:48] [INFO] Overfitting gap: 2.77%
+[2026-06-22 14:10:48] [INFO] Pre-screening hit rate: 0.00%
+[2026-06-22 14:10:48] [INFO] 
+✅ Model is ready for 110M screening!
+[2026-06-22 14:10:48] [INFO] Feature order: ../models/experiments/CTNNB1/exp_06/Results/feature_order.json
+[2026-06-22 14:10:48] [INFO] Model file: ../models/experiments/CTNNB1/exp_06/Results/random_forest_final_model.pkl
+[2026-06-22 14:10:48] [INFO] Metadata: ../models/experiments/CTNNB1/exp_06/Results/model_metadata.json

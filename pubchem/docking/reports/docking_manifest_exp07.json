@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-23T11:02:49.779106+00:00",
+  "experiment_suffix": "07",
+  "genes": [
+    {
+      "gene": "MYC",
+      "exp_suffix": "07",
+      "cids": [
+        155148070,
+        124118010,
+        134587525,
+        155565427,
+        134600220
+      ],
+      "pdb_id": "6G6K",
+      "summary_json": "/home/beyza/github_prep/pubchem/updated_docking/runs/MYC/exp_07/results/docking_summary.json",
+      "best_cid": 134600220,
+      "best_affinity": -8.472
+    }
+  ]
+}

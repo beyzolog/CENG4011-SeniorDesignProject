@@ -1,0 +1,9 @@
+runs/
+shared/ligands/*.pdbqt
+shared/ligands/*.sdf
+shared/ligands/*_2d.sdf
+bin/vina
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/

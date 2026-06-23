@@ -1,0 +1,20 @@
+# Gene-specific Vina docking parameters for updated_docking pipeline.
+# CIDs are loaded dynamically from screening/*_clusters.csv (top-5).
+
+MYC:
+  pdb_id: "6G6K"
+  chain: "A"
+  center: [-62.05, -42.04, -70.03]
+  box_size: 30
+  exhaustiveness: 64
+  num_modes: 9
+  energy_range: 3
+
+CTNNB1:
+  pdb_id: "1JPW"
+  chain: "A"
+  center: [106.24, -11.00, 14.37]
+  box_size: 30
+  exhaustiveness: 64
+  num_modes: 9
+  energy_range: 3

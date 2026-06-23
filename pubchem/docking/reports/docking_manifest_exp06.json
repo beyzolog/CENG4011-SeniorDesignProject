@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-23T11:02:49.360563+00:00",
+  "experiment_suffix": "06",
+  "genes": [
+    {
+      "gene": "CTNNB1",
+      "exp_suffix": "06",
+      "cids": [
+        44819571,
+        69167437,
+        75076830,
+        166156634,
+        17402902
+      ],
+      "pdb_id": "1JPW",
+      "summary_json": "/home/beyza/github_prep/pubchem/updated_docking/runs/CTNNB1/exp_06/results/docking_summary.json",
+      "best_cid": 75076830,
+      "best_affinity": -7.869
+    }
+  ]
+}

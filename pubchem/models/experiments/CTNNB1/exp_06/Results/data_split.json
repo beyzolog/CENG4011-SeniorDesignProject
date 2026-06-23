@@ -1,0 +1,7 @@
+{
+  "train_size": 536,
+  "test_size": 179,
+  "train_active": 387,
+  "test_active": 129,
+  "random_state": 42
+}
